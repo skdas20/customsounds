@@ -1,0 +1,150 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #007bff, #67d3f7);
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-links a:hover {
+    color: #ffdd57;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    padding-top: 100px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 2.5rem;
+}
+
+.upload-label {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    display: block;
+}
+
+input[type="file"] {
+    margin: 15px 0;
+}
+
+.action-button {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff6f61, #ff9068);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.action-button:hover {
+    background: linear-gradient(45deg, #ff9068, #ff6f61);
+    transform: scale(1.1);
+}
+
+/* Camera Button */
+.camera-button {
+    padding: 15px 25px;
+    background: linear-gradient(45deg, #6f61ff, #9068ff);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.camera-button:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Bubbles Effect */
+.background {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background::before, .background::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    top: -50px;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.background::after {
+    top: 30%;
+    left: 70%;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}

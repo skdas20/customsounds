@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="background">
+        <nav class="navbar">
+            <div class="logo">Emotion Analyzer</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#explore">Explore</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <h1>Detect Emotions, Get Personalized Music 🎵</h1>
+            <form id="uploadForm" method="POST" enctype="multipart/form-data">
+                <label for="file" class="upload-label">Upload an Image:</label>
+                <input type="file" id="file" name="file" required>
+                <button type="submit" class="action-button">Analyze Emotion</button>
+            </form>
+            <div class="camera-container">
+                <button id="cameraButton" class="camera-button">🎥 Start Camera</button>
+            </div>
+            <div id="results"></div>
+        </div>
+
+        <footer>
+            <p>© 2024 Emotion Analyzer | Designed with ❤️</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
